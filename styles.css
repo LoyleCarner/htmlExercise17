@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 header{
   background-color: aqua;
   height: 200px;
@@ -40,6 +43,7 @@ text-align: center;
   font-size: 30px;
 }
 
+/*
 .cssGrid{
   display: grid;
   margin: 0 10%;
@@ -48,12 +52,15 @@ text-align: center;
 }
 
 .cssGrid .gridEl-1{grid-column: span 1;}
-.cssGrid .gridEl-1{grid-column: span 2;}
-.cssGrid .gridEl-1{grid-column: span 3;}
-.cssGrid .gridEl-1{grid-column: span 4;}
-.cssGrid .gridEl-1{grid-column: span 5;}
+.cssGrid .gridEl-2{grid-column: span 2;}
+.cssGrid .gridEl-3{grid-column: span 3;}
+.cssGrid .gridEl-4{grid-column: span 4;}
+.cssGrid .gridEl-5{grid-column: span 5;}
+*/
+.row{
+  display: flex;
+}
 
-/*
 .myGrid{
   display: flex;
   flex-wrap: wrap;
@@ -64,16 +71,16 @@ text-align: center;
 .myGrid .gridEL-1{
   width: 20%;
 }
-.myGrid .gridEL-1{
+.myGrid .gridEL-2{
   width: 40%;
 }
-.myGrid .gridEL-1{
+.myGrid .gridEL-3{
   width: 60%;
 }
-.myGrid .gridEL-1{
+.myGrid .gridEL-4{
   width: 80%;
 }
-.myGrid .gridEL-1{
+.myGrid .gridEL-5{
   width: 100%;
 }
-*/
+
