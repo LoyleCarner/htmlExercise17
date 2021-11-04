@@ -44,19 +44,6 @@ text-align: center;
 }
 
 /*
-.cssGrid{
-  display: grid;
-  margin: 0 10%;
-  width: 80%;
-  grid-template-columns: 5fr;
-}
-
-.cssGrid .gridEl-1{grid-column: span 1;}
-.cssGrid .gridEl-2{grid-column: span 2;}
-.cssGrid .gridEl-3{grid-column: span 3;}
-.cssGrid .gridEl-4{grid-column: span 4;}
-.cssGrid .gridEl-5{grid-column: span 5;}
-*/
 .row{
   display: flex;
 }
@@ -83,4 +70,73 @@ text-align: center;
 .myGrid .gridEL-5{
   width: 100%;
 }
+*/
 
+.container{
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1em;
+  margin: 0 20px;
+}
+
+.item-1{
+  grid-column: col-start / span 12;
+}
+
+.item-2{
+  grid-column: col-start 2 / -1;
+}
+
+.item-3{
+  grid-column: col-start 2 / 5;
+}
+
+.item-4{
+  grid-column: col-start 5 / span 5;
+}
+
+.item-5{
+  grid-column: col-start 10 / 12;
+}
+
+.item-6{
+  grid-column: 1 / span 12;
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+
+  .item-2{
+    grid-column: col-start 1 / -1;
+  }
+
+  .item-3{
+    grid-column: col-start 1 / 7;
+  }
+  
+  .item-4{
+    grid-column: col-start 7 / 13;
+  }
+  
+  .item-5{
+    grid-column: col-start 1 / -1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .item-2{
+    grid-column: col-start 1 / -1;
+  }
+
+  .item-3{
+    grid-column: col-start 1 / -1;
+  }
+  
+  .item-4{
+    grid-column: col-start 1 / -1;
+  }
+
+  .item-5{
+    grid-column: col-start 1 / -1;
+  }
+}
